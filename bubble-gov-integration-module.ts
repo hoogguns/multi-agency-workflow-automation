@@ -43,6 +43,7 @@ interface VerificationStep {
 class GovernmentAuthenticationManager {
   private agencyProfiles: Map<string, AgencyAuthenticationProfile> = new Map();
   private activeAuthentications: Map<string, ActiveAuthentication> = new Map();
+  getAgencyProfile: any;
 
   // CAC/PIV Card Verification
   async verifyCAC_PIV_Credentials(credentials: CAC_PIV_Credentials): Promise<AuthenticationResult> {
